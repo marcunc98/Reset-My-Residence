@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Reset My Residence</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <!-- Style -->
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+            * element that contains the map. */
+        #map {
+            height: 400px;
+            width: 400px;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+        <!-- J Query --> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> 
+    </head>
+
+
+    <body>
+        <!-- Search a city -->
+        <input id="citySearch" type="text">
+        <button id="searchBtn" type="submit">Submit</button>
+
+        <!-- City Map w POI -->
+        <div id="map"></div>
+
+        <!-- Link to Map Script -->
+        <script src="assets/javascript/map.js"></script>
+
+        <!-- Map "ajax" request *** IMPORTANT *** don't delete -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH6YXtKRN9qmmi7CGTBh3Mw7Ae5Lb3kfQ&libraries=places&callback=initMap">
+        </script>
+
+    </body>
+
+</html>
