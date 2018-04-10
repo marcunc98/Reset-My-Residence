@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <!-- Style -->
         <style>
+        
             /* Always set the map height explicitly to define the size of the div
             * element that contains the map. */
         #map {
@@ -16,10 +17,12 @@
         /* Optional: Makes the sample page fill the window. */
         html, body {
             height: 100%;
-            margin: 0;
+            margin: 5px;
             padding: 0;
         }
         </style>
+        <!-- Link to Materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" />
         <!-- J Query --> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Firebase -->
@@ -28,12 +31,33 @@
 
 
     <body>
+        <h1>Reset My Residence</h1>
+
+        
         <!-- Search a city -->
-        <input id="citySearch" type="text">
+        <input id="citySearch" placeholder="Explore a new city" type="text">
         <button id="searchBtn" type="submit">Submit</button>
 
         <!-- City Map w POI -->
         <div id="map"></div>
+
+        <!-- Weather -->
+        <div class="weather"></div>
+            <div class="city"></div>
+            <div class="currentTemp"></div>
+            <div class="hightemp"></div>
+            <div class="lowtemp"></div>
+            <div class="weathertext"></div>
+            <imgage class="icon"> </imgage>
+        </div>
+
+        <div id="foodspotting"></div>
+
+        <!-- Link to Foodspotting Script -->
+        <script src="assets/javascript/foodspotting.js"></script>
+
+        <!-- Link to Weather Script -->
+        <script src="assets/javascript/weather.js"></script>
 
         <!-- Link to Map Script -->
         <script src="assets/javascript/map.js"></script>

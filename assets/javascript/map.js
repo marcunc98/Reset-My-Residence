@@ -95,6 +95,7 @@ function initMap() {
                 position: place.geometry.location
             });
             google.maps.event.addListener(marker, 'click', function() {
+                console.log(place);
                 infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
                   'Place ID: ' + place.place_id + '<br>' +
                   place.formatted_address + '</div>');
