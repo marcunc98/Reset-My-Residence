@@ -11,7 +11,7 @@ $(document).on("click", "#searchBtn", function(){
 
 function getWeatherDetailsByCity(city) {
 
-    var queryURL = "http://dataservice.accuweather.com/locations/v1/search?q=" + city + "&apikey=" + APIKey;
+    var queryURL = "https://dataservice.accuweather.com/locations/v1/search?q=" + city + "&apikey=" + APIKey;
 
     //** Call gives us City Name , State, State Abbreviation **//
     $.ajax({
@@ -36,7 +36,7 @@ function getWeatherDetailsByCity(city) {
 
        $.ajax({
          // url: "http://dataservice.accuweather.com/forecasts/v1/daily/1day/329823?apikey=gEyFG3sMmsH53AETARb5e8HpJutTAtfv",
-         url: "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + locationKey + "?apikey="+ APIKey,
+         url: "https://dataservice.accuweather.com/forecasts/v1/daily/1day/" + locationKey + "?apikey="+ APIKey,
          method: "GET"
        }).then(function (response) {
          var highTemp = response.DailyForecasts["0"].Temperature.Maximum.Value;
@@ -55,7 +55,7 @@ function getWeatherDetailsByCity(city) {
        //** Call gives us the current Weather **//
 
        $.ajax({
-         url: "http://dataservice.accuweather.com/currentconditions/v1/" + locationKey + "?apikey="+ APIKey,
+         url: "https://dataservice.accuweather.com/currentconditions/v1/" + locationKey + "?apikey="+ APIKey,
          method: "GET"
        }).then(function (response) {
          var currentTemp = response["0"].Temperature.Imperial.Value;
