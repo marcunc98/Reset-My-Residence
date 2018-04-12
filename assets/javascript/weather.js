@@ -69,6 +69,9 @@ function getWeatherDetailsByCity(city) {
 
          $(".currentTemp").html("Current Temperature: "+ currentTemp);
          $(".weathertext").html(weatherText);
+         var weatherNumber = response["0"].WeatherIcon.toString();
+         $(".icon").attr("src", " https://developer.accuweather.com/sites/default/files/" + (weatherNumber.length === 1 ? '0' + weatherNumber : weatherNumber) + "-s.png");
+       
        
          // $(".icon").append(weatherText);
        });
