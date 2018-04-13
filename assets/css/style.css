@@ -5,16 +5,9 @@
         
         html, body {
             height: 100%;
-<<<<<<< HEAD
             padding: 0px;
             margin: 0px;
         }
-     
-=======
-            margin: 5px;
-            padding: 0;
-        }
-
         .header{
             height:300px;
             line-height: 300px;
@@ -23,4 +16,3 @@
         .title{
             font-size: 600px;
         }
->>>>>>> HK-branch
