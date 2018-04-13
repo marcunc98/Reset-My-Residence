@@ -1,169 +1,188 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-        <title>Reset Your Residence</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Reset Your Residence</title>
 
-  <!-- CSS  -->
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-  <!-- Link to Materialize -->
+    <!-- Link to Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css" />
-  <!-- J Query --> 
+    <!-- J Query -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> 
-    </head>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+</head>
 
+<body>
+    <nav class="orange lighten-1 header" role="navigation">
+        <div class="nav-wrapper container">
+                <img src=".\assets\images\finalImage.png" class="center" alt="logo" height="300" width="300">
+            <a id="logo-container" href="#"  class="brand-logo center light-blue-text title">Reset Your Residence</a>
 
-    <body>
-            <nav class="light-blue lighten-1" role="navigation">
-                    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Reset Your Residence</a>
-                
-                      
-                    </div>
-                  </nav>
-        <div class="section no-pad-bot" id="index-banner">
-            <div class="container">
-              <br><br>
-              <div class = "row center">
-                <img src=".\assets\images\Reset your Residence logo_final.png" class="center" alt="logo" height="300" width="300">                
-              </div>
-              <h1 class="header center orange-text">Reset Your Residence</h1>
-              <div class="row center">
-                <h5 class="header col s12 light">Your moving application to help you find the perfect city for you!</h5>
-              </div>
-              <div class="row center">
-                <button id="searchBtn" class="btn-large waves-effect waves-light orange" type="submit">Get Started</button>
-                
-                <input id="citySearch" placeholder="Explore a new city" type="text">
-                </form> 
-              </div>
-            </div>
         </div>
+    </nav>
+    <br>
+    <br>
 
+    <div class="row center">
         
-        <!-- Map, weather, food information> -->
-        <div class="container">
-            <div class="mainSection">
+    </div>
+
+    <div class="container">
+            <div class="section">
+    
+                <!--   Icon Section   -->
                 <div class="row">
-
-        <!-- City Map w POI -->
                     <div class="col s12 m4">
-                        <h5 class="center">Map of your selected city</h5>        
-                        <div id="map"></div>
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="large material-icons">cake</i>
+                            </h2>
+                            <h5 class="center">Find a place to Eat!</h5>
+    
+                            <p class="light">With a food recommendation populating automatically with your city search, you are sure to find the
+                                best places to eat in your new city!</p>
+                        </div>
+                    </div>
+    
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="large material-icons">group</i>
+                            </h2>
+                            <h5 class="center">Search local events in the area</h5>
+    
+                            <p class="light">See what is going on in the searched city/area. Find restaurants, bars, live music, and overall anything
+                                that is happening in your selected area.</p>
+                        </div>
+                    </div>
+    
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="large material-icons">cloud</i>
+                            </h2>
+                            <h5 class="center">Check out current weather</h5>
+    
+                            <p class="light">See current weather in the area. Whether you are warm or cold blooded, this tool will help you make
+                                the best moving decision weather wise. </p>
+                        </div>
                     </div>
 
-        <!-- Weather -->
-                    <div class="col s12 m4">    
-                        <h5 class="center">Current weather</h5>        
-                        <div class="weather"></div>
-                        <div class="city"></div>
-                        <div class="currentTemp"></div>
-                        <div class="hightemp"></div>
-                        <div class="lowtemp"></div>
-                        <div class="weathertext"></div>
-                        <imgage class="icon"> </imgage>
-                    </div>
+    <!-- Map, weather, food information> -->
+    <div class="container">
+        <div class="mainSection">
+            <div class="row">
 
-        <!-- Food -->
-                    <div class="col s12 m4">    
-                        <h5 class="center">Places to eat</h5>      
-                        <div id="zomato"></div>
-                    </div>
+                <!-- City Map w POI -->
+                <div class="col s12 m4">
+                    <h5 class="center">Map Of Your The City</h5>
+                    <div id="map"></div>
+                </div>
+
+                <!-- Weather -->
+                <div class="col s12 m4">
+                    <h5 class="center">Current Weather</h5>
+                    <div class="weather"></div>
+                    <div class="city"></div>
+                    <div class="currentTemp"></div>
+                    <div class="hightemp"></div>
+                    <div class="lowtemp"></div>
+                    <div class="weathertext"></div>
+                    <imgage class="icon"> </imgage>
+                </div>
+
+                <!-- Food -->
+                <div class="col s12 m4">
+                    <h5 class="center">Places To Eat</h5>
+                    <div id="foodspotting"></div>
                 </div>
             </div>
         </div>
-<br>
-<br>
+    </div>
 
-<div class="container">
-        <div class="section">
-    
-          <!--   Icon Section   -->
-          <div class="row">
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="medium material-icons">cake</i></h2>
-                <h5 class="center">Find a place to Eat!</h5>
-    
-                <p class="light">With a food recommendation populating automatically with your city search, you are sure to find the best places to eat in your new city!</p>
-              </div>
             </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="medium material-icons">group</i></h2>
-                <h5 class="center">Search local events in the area</h5>
-    
-                <p class="light">See what is going on in the searched city/area.  Find restaurants, bars, live music, and overall anything that is happening in your selected area. </p>
-              </div>
+            <div class="section no-pad-bot" id="index-banner">
+                <div class="container">
+                    <br>
+                    <br>
+
+                    
+                    <div class="row center">
+                        <h5 class="header col s12 light">Your moving application to help you find the perfect city for you!</h5>
+                    </div>
+                    <div class="row center">
+
+                        <button id="searchBtn" div class="col l4 m12 offset-l4 btn-large waves-effect waves-light orange" type="submit">Get Started</button>
+
+                        <input id="citySearch" div class="col l4 offset-l4" placeholder="Explore a new city" type="text">
+                        </form>
+                    </div>
+                </div>
             </div>
-    
-            <div class="col s12 m4">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="medium material-icons">cloud</i></h2>
-                <h5 class="center">Check out current weather</h5>
-    
-                <p class="light">See current weather in the area.  Whether you are warm or cold blooded, this tool will help you make the best moving decision weather wise. </p>
-              </div>
-            </div>
-          </div>
-    
+
+
         </div>
-        <br><br>
-      </div>
-    
-      <footer class="page-footer orange">
-        <div class="container">
-          <div class="row">
-            <div class="col s9">
-              <h5 class="white-text">Team Bio</h5>
-              <p class="white-text">We are a team dedicated to help you find your next city to live in!  With the countless city statistics available through multiple sources, it can be hard to determine the best place to move.  With the help of this application we hope to show you a snapshot of your potential new city.</p>
-    
-    
-            </div>
+        <br>
+        <br>
+    </div>
 
-            <div class="col l3 s12">
-              <h5 class="white-text">Contact Info</h5>
-              <ul>
-                <li><a class="white-text" href="#!">If you have any questions, please reach out to us at ContactUs@ResetYourResidence.com</a></li>
-              </ul>
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col s9">
+                    <h5 class="white-text">Team Bio</h5>
+                    <p class="white-text">We are a team dedicated to help you find your next city to live in! With the countless city statistics
+                        available through multiple sources, it can be hard to determine the best place to move. With the
+                        help of this application we hope to show you a snapshot of your potential new city.</p>
+
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Contact Info</h5>
+                    <ul>
+                        <li>
+                            <a class="white-text" href="#!">If you have any questions, please reach out to us at ContactUs@ResetYourResidence.com</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
         <div class="footer-copyright">
-          <div class="container">
-          Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Reset Your Residence</a>
-          </div>
+            <div class="container">
+                Made by
+                <a class="orange-text text-lighten-3" href="http://materializecss.com">Reset Your Residence</a>
+            </div>
         </div>
-      </footer>
-    
-    
-      <!--  Scripts-->
-      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="js/materialize.js"></script>
-      <script src="js/init.js"></script>
+    </footer>
 
-      <!-- Link to Zomato Script -->
-      <script src="assets/javascript/zomato.js"></script>
-
-      <!-- Link to Weather Script -->
-      <script src="assets/javascript/weather.js"></script>
-
-      <!-- Link to Map Script -->
-      <script src="assets/javascript/map.js"></script>
-
-      <!-- Map "ajax" request *** IMPORTANT *** don't delete -->
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH6YXtKRN9qmmi7CGTBh3Mw7Ae5Lb3kfQ&libraries=places&callback=initMap">
-      </script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 
 
-    </body>
+
+
+    <!-- Link to Foodspotting Script -->
+    <script src="assets/javascript/foodspotting.js"></script>
+
+    <!-- Link to Weather Script -->
+    <script src="assets/javascript/weather.js"></script>
+
+    <!-- Link to Map Script -->
+    <script src="assets/javascript/map.js"></script>
+
+    <!-- Map "ajax" request *** IMPORTANT *** don't delete -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH6YXtKRN9qmmi7CGTBh3Mw7Ae5Lb3kfQ&libraries=places&callback=initMap">
+    </script>
+
+</body>
 
 </html>
