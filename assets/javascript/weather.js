@@ -28,7 +28,7 @@ function getWeatherDetailsByCity(city) {
        console.log(response["0"].AdministrativeArea.ID);
        console.log(locationKey);
 
-       $(".city").html("Weather for " + cityName + ", " + state);
+       $(".city").html("for " + cityName + ", " + state);
        
        
 
@@ -46,8 +46,8 @@ function getWeatherDetailsByCity(city) {
          console.log("Low Temp " + response.DailyForecasts["0"].Temperature.Minimum.Value);
 
 
-         $(".hightemp").html("Expected High: " + highTemp);
-         $(".lowtemp").html("Expected Low: "+ lowTemp);
+         $(".hightemp").html("Expected High: " + highTemp +"°F");
+         $(".lowtemp").html("Expected Low: "+ lowTemp +"°F");
        
 
        });
@@ -67,7 +67,7 @@ function getWeatherDetailsByCity(city) {
          console.log(response["0"].WeatherText);
          console.log(response["0"].WeatherIcon);//Weather Icon
 
-         $(".currentTemp").html("Current Temperature: "+ currentTemp);
+         $(".currentTemp").html("Current Temperature: "+ currentTemp +"°F");
          $(".weathertext").html(weatherText);
          var weatherNumber = response["0"].WeatherIcon.toString();
          $(".icon").attr("src", " https://developer.accuweather.com/sites/default/files/" + (weatherNumber.length === 1 ? '0' + weatherNumber : weatherNumber) + "-s.png");
@@ -83,4 +83,4 @@ function getWeatherDetailsByCity(city) {
 
    }
 
-   getWeatherDetailsByCity("");
+   getWeatherDetailsByCity("Raleigh");

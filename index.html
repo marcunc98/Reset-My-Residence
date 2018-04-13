@@ -22,115 +22,128 @@
 <body>
     <nav class="orange lighten-1 header" role="navigation">
         <div class="nav-wrapper container">
-                <img src=".\assets\images\finalImage.png" class="center" alt="logo" height="300" width="300">
-            <a id="logo-container" href="#"  class="brand-logo center light-blue-text title">Reset Your Residence</a>
-
+            <div class="row">
+                <div class="col">
+                    <img src=".\assets\images\finalImage.png" class="center" alt="logo" height="300" width="300">
+                </div>
+                <div class="col">
+                    <a id="logo-container" href="#"  class="brand-logo center light-blue-text title">Reset Your Residence</a>
+                </div>
+            </div>
         </div>
     </nav>
-    <br>
-    <br>
 
-    <div class="row center">
-        
+    
+    <div class="container">
+        <!-- Site Description-->
+        <div class="row center">
+            <h5 class="col s12 light description">Your moving application to help you find the perfect city for you!</h5>
+        </div>
+
+        <!--   Icon Section   -->
+        <div class="row center">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text">
+                        <i class="large material-icons">cake</i>
+                    </h2>
+                    <h5 class="center">What to eat?</h5>
+
+                    <p class="light">Food recommendations will populate automatically with your city search; so you are sure to find the
+                        best places to eat in your new home!</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text">
+                        <i class="large material-icons">group</i>
+                    </h2>
+                    <h5 class="center">What to do?</h5>
+
+                    <p class="light">See what is going on in the searched city. Click around the map to orient yourself with local parks, museums, restaurants, bars, live music venues, etc.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text">
+                        <i class="large material-icons">cloud</i>
+                    </h2>
+                    <h5 class="center">What to wear?</h5>
+
+                    <p class="light">See current weather in the area. Whether you are warm or cold blooded, this tool will help you make
+                        the best moving decision weather wise. </p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
-            <div class="section">
-    
-                <!--   Icon Section   -->
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text">
-                                <i class="large material-icons">cake</i>
-                            </h2>
-                            <h5 class="center">Find a place to Eat!</h5>
-    
-                            <p class="light">With a food recommendation populating automatically with your city search, you are sure to find the
-                                best places to eat in your new city!</p>
-                        </div>
+        <div class="section">
+
+
+            
+
+            <div class="section no-pad-bot" id="index-banner">
+                <div class="container">
+                    <div class="row center">
+                        <button id="searchBtn" div class="col l4 m12 offset-l4 btn-large waves-effect waves-light orange" type="submit">Get Started</button>
+                        <input id="citySearch" div class="col l4 offset-l4" placeholder="Explore a new city" type="text">
                     </div>
-    
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text">
-                                <i class="large material-icons">group</i>
-                            </h2>
-                            <h5 class="center">Search local events in the area</h5>
-    
-                            <p class="light">See what is going on in the searched city/area. Find restaurants, bars, live music, and overall anything
-                                that is happening in your selected area.</p>
-                        </div>
-                    </div>
-    
-                    <div class="col s12 m4">
-                        <div class="icon-block">
-                            <h2 class="center light-blue-text">
-                                <i class="large material-icons">cloud</i>
-                            </h2>
-                            <h5 class="center">Check out current weather</h5>
-    
-                            <p class="light">See current weather in the area. Whether you are warm or cold blooded, this tool will help you make
-                                the best moving decision weather wise. </p>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+    <br>
+    <br>
 
     <!-- Map, weather, food information> -->
     <div class="container">
         <div class="mainSection">
+            
             <div class="row">
 
                 <!-- City Map w POI -->
-                <div class="col s12 m4">
-                    <h5 class="center">Map Of Your The City</h5>
+                <div class="col s12 m8">
+                    <h5 class="center">Map Of Your City</h5>
+                    <br>
                     <div id="map"></div>
-                </div>
-
-                <!-- Weather -->
-                <div class="col s12 m4">
+                    <br>
+                    <br>
+                    <!-- Weather -->
+                            
                     <h5 class="center">Current Weather</h5>
-                    <div class="weather"></div>
-                    <div class="city"></div>
-                    <div class="currentTemp"></div>
-                    <div class="hightemp"></div>
-                    <div class="lowtemp"></div>
-                    <div class="weathertext"></div>
-                    <imgage class="icon"> </imgage>
+                    
+                    <div class="weather center"></div>
+                    <div class="city center"></div>
+                    <br>
+
+                    <div class="center">
+                        <img class="icon"></img>
+                    </div>
+                    
+                    <div class="weathertext center"></div>
+                
+                    <div class="currentTemp center"></div>
+                    
+                    <div class="hightemp center"></div>
+                
+                    <div class="lowtemp center"></div>
                 </div>
 
                 <!-- Food -->
                 <div class="col s12 m4">
-                    <h5 class="center">Places To Eat</h5>
-                    <div id="foodspotting"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-            </div>
-            <div class="section no-pad-bot" id="index-banner">
-                <div class="container">
-                    <br>
-                    <br>
-
                     
-                    <div class="row center">
-                        <h5 class="header col s12 light">Your moving application to help you find the perfect city for you!</h5>
-                    </div>
-                    <div class="row center">
-
-                        <button id="searchBtn" div class="col l4 m12 offset-l4 btn-large waves-effect waves-light orange" type="submit">Get Started</button>
-
-                        <input id="citySearch" div class="col l4 offset-l4" placeholder="Explore a new city" type="text">
-                        </form>
-                    </div>
+                    <h5 class="center">Places To Eat</h5>
+                    <br>
+                    <div id="zomato"></div>
+                    
                 </div>
             </div>
-
-
         </div>
-        <br>
-        <br>
     </div>
 
     <footer class="page-footer orange">
@@ -170,8 +183,8 @@
 
 
 
-    <!-- Link to Foodspotting Script -->
-    <script src="assets/javascript/foodspotting.js"></script>
+    <!-- Link to Zomato Script -->
+    <script src="assets/javascript/zomato.js"></script>
 
     <!-- Link to Weather Script -->
     <script src="assets/javascript/weather.js"></script>

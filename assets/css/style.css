@@ -1,6 +1,6 @@
         #map {
-            height: 400px;
-            width: 200px;
+            height: 450px;
+            width: 100%;
         };
         
         html, body {
@@ -10,9 +10,16 @@
         }
         .header{
             height:300px;
-            line-height: 300px;
+            line-height: 100px;
         }
 
-        .title{
-            font-size: 600px;
+        #logo-container {
+            font-size: 80px;
+            width: 200px;
+            text-shadow: 2px 2px #00000099;
+            
+        }
+        .description {
+            
+            font-size: 30px;
         }

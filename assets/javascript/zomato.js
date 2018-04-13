@@ -1,9 +1,9 @@
-var city = "Raleigh-NC";
+var city = "Raleigh";
 
 function loadzomato(){
 
     var apikey = "efa73428872b6e3026a1ed341008fb12";
-    var queryURL = "http://developers.zomato.com/api/v2.1/cities?q="+ city +"&apikey=efa73428872b6e3026a1ed341008fb12"
+    var queryURL = "https://developers.zomato.com/api/v2.1/cities?q="+ city +"&apikey=efa73428872b6e3026a1ed341008fb12"
 
     $.ajax({
         url: queryURL,
