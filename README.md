@@ -32,7 +32,7 @@ select "Get Started". From there you can see the hot restaurants, a map of the c
  * Marcus Roberts
 
 
- ##Acknowledgments
+ ## Acknowledgments
  * Zomato
  * AccuWeather 
  * Google Maps
